@@ -15,6 +15,11 @@ defmodule Identicon do
       |> Enum.with_index
   end
 
+  def filter_odd_squares(%Identicon.Image(grid: grid) = image) do
+    Enum.filter grid, fn(square) ->
+    end
+  end
+
   def mirror_row(row) do
     [first, second | _tail] = row
     row ++ [second, first]  
